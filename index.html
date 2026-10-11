@@ -1010,19 +1010,19 @@
           <div class="app-card-hint">🔍 Ver detalles y uso</div>
         </div>
 
-        <!-- Programa 3 -->
-        <div class="app-card" data-app="programa-3">
-          <div class="app-icon">
+        <!-- ViKonvert -->
+        <div class="app-card" data-app="vikonvert">
+          <div class="app-icon" style="background: linear-gradient(135deg, #1a0030, #7b2ff7);">
             <svg viewBox="0 0 24 24">
-              <path
-                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+              <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" />
             </svg>
           </div>
           <div class="app-info">
-            <div class="app-title">Programa 3</div>
-            <div class="app-desc">Espacio reservado para un futuro programa.</div>
+            <div class="app-title">ViKonvert</div>
+            <div class="app-desc">Convertidor de video, descargador de YouTube e Instagram y editor de video.</div>
           </div>
-          <a href="#" class="app-btn" download>Descargar</a>
+          <a href="https://github.com/supervic1123/vikenasmart-limpio/raw/refs/heads/main/Instalador_Convertidor_Video.exe" class="app-btn"
+            download>Descargar</a>
           <div class="app-card-hint">🔍 Ver detalles y uso</div>
         </div>
 
@@ -1981,6 +1981,31 @@
         ],
         videos: [],
         images: []
+      },
+      "vikonvert": {
+        title: "ViKonvert",
+        logo: "",
+        logoSvg: '<svg viewBox="0 0 24 24" style="width:40px;height:40px;fill:#7b2ff7;filter:drop-shadow(0 0 8px #7b2ff7);"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/></svg>',
+        desc: "Convertidor de video multiformato, descargador de YouTube e Instagram y editor de video todo en uno.",
+        downloadUrl: "https://github.com/supervic1123/vikenasmart-limpio/raw/refs/heads/main/Instalador_Convertidor_Video.exe",
+        downloadText: "Descargar ViKonvert",
+        fullDesc: "<b>ViKonvert</b> es una herramienta todo en uno para trabajar con videos de forma rápida y sencilla desde tu PC con Windows.<br><br>" +
+          "<b>🎬 Convertidor de video:</b> Convierte videos entre múltiples formatos como MP4, AVI, MKV, MOV, WMV, FLV, WebM y muchos más. Compatible con resoluciones HD, Full HD y 4K.<br><br>" +
+          "<b>⬇️ Descargador de YouTube:</b> Descarga videos y música de YouTube en la mejor calidad disponible. Soporta videos individuales y listas de reproducción completas.<br><br>" +
+          "<b>📸 Descargador de Instagram:</b> Descarga reels, stories, publicaciones y videos de Instagram directamente a tu computadora con un solo click.<br><br>" +
+          "<b>✂️ Editor de video:</b> Edita tus videos con herramientas como cortar, unir, recortar, agregar texto, ajustar brillo/contraste y aplicar filtros.<br><br>" +
+          "<b>Requisitos:</b> Windows 10 o superior.",
+        steps: [
+          "Descarga el instalador <code>Instalador_Convertidor_Video.exe</code> haciendo click en el botón de descarga.",
+          "Ejecuta el instalador y sigue las instrucciones del asistente de instalación.",
+          "Abre <b>ViKonvert</b> desde el acceso directo creado en tu escritorio.",
+          "<b>Para convertir:</b> Selecciona el video que deseas convertir, elige el formato de salida deseado y haz click en 'Convertir'.",
+          "<b>Para descargar de YouTube:</b> Copia la URL del video de YouTube, pégala en la sección de descargas y haz click en 'Descargar'.",
+          "<b>Para descargar de Instagram:</b> Copia el enlace del reel, story o publicación de Instagram, pégalo en la sección de descargas y descarga el contenido.",
+          "<b>Para editar:</b> Abre un video en el editor, utiliza las herramientas de corte, texto y filtros, y guarda el resultado final."
+        ],
+        videos: [],
+        images: []
       }
     };
 
@@ -2014,6 +2039,8 @@
       const logoContainer = document.getElementById('modalLogoContainer');
       if (data.logo) {
         logoContainer.innerHTML = `<img id="modalAppLogo" src="${data.logo}" alt="${data.title}">`;
+      } else if (data.logoSvg) {
+        logoContainer.innerHTML = data.logoSvg;
       } else {
         logoContainer.innerHTML = `<svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>`;
       }
